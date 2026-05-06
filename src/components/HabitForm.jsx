@@ -14,7 +14,6 @@ const HabitForm = ({onAddHabit}) => {
             alert("Por favor, ingresa un tiempo válido.");
             return;
         }
-
         const newHabit = {
             id: Date.now(),
             name,
