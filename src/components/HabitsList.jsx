@@ -1,12 +1,12 @@
-const HabitsList = ({habits}) => {
+const HabitsList = ({habits, onDeleteHabit}) => {
     return (
         <div>
             <h2>Habits List</h2>
-            <ul>
                 {habits.map((habit) => (
-                    <p key={habit.id}>{habit.name} - {habit.time} minutes</p>
+                    <p key={habit.id}>{habit.name} - {habit.time} minutos
+                    <button className="deleteButton" onClick={() => onDeleteHabit(habit.id)}>❌</button>
+                    </p>
                 ))}
-            </ul>
     </div>
   );
 };

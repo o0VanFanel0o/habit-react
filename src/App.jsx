@@ -11,11 +11,15 @@ function App() {
   const addHabit = (newHabit) => {
     setHabits([...habits, newHabit]);
   };
+  const deleteHabit = (id) => {
+    const updatedHabits = habits.filter((habit) => habit.id !== id);
+    setHabits(updatedHabits);
+  };
   return (
     <div>
       <h1>Habits Tracker</h1>
       <HabitForm onAddHabit={addHabit}/>
-      <HabitsList habits={habits}/>
+      <HabitsList habits={habits} onDeleteHabit={deleteHabit}/>
     </div>
   );
 }
