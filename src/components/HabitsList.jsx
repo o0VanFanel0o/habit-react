@@ -1,14 +1,18 @@
-const HabitsList = ({habits, onDeleteHabit}) => {
+const HabitsList = ({habits, deleteHabit, toggleHabit}) => {
     return (
         <div>
             <h2>Habits List</h2>
                 {habits.map((habit) => (
-                    <p key={habit.id}>{habit.name} - {habit.time} minutos
-                    <button className="deleteButton" onClick={() => onDeleteHabit(habit.id)}>❌</button>
-                    </p>
+                    <div key={habit.id}>
+                        <input type="checkbox" 
+                        checked={habit.completed} 
+                        onChange={() => toggleHabit(habit.id)} />
+                        <p>{habit.name} - {habit.time} minutos</p>
+                        <button onClick={() => deleteHabit(habit.id)}>❌</button>
+                    </div>
                 ))}
-    </div>
-  );
+        </div>
+    );
 };
 
 export default HabitsList;
