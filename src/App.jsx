@@ -1,12 +1,13 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HabitsList from "./components/HabitsList";
 import HabitForm from "./components/HabitForm";
 
 function App() {
-  const [habits, setHabits] = useState([
-    { id: 1, name: "Read", time: 30, completed: false },
-    { id: 2, name: "Exercise", time: 45, completed: false },
-  ]);
+  const [habits, setHabits] = useState(() => {
+    const saveHabits = localStorage.getItem("habits");
+
+    return saveHabits ? JSON.parse(saveHabits) : [];
+  })
 
   const addHabit = (newHabit) => {
     setHabits([...habits, { ...newHabit, completed: false }]);
@@ -24,6 +25,11 @@ function App() {
     const updatedHabits = habits.map(habit => habit.id === id ? {...habit, completed: !habit.completed} : habit);
     setHabits(updatedHabits);
   };
+
+  useEffect(() => {
+    localStorage.setItem("habits", JSON.stringify(habits))
+  }, [habits])
+
   return (
     <div>
       <h1>Habits Tracker</h1>
@@ -40,7 +46,7 @@ function App() {
       }}>
       <div style={{
         width: `${percentage}%`,
-        backgroundColor: "green",
+        backgroundColor: percentage === 100 ? "limegreen" : "orange",
         height: "20px",
         transition: "0.3s"
       }}>
