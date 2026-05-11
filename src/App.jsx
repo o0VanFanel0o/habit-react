@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import HabitsList from "./components/HabitsList";
 import HabitForm from "./components/HabitForm";
+import ProgressSummary from "./components/ProgressSummary";
 
 function App() {
   const [habits, setHabits] = useState(() => {
@@ -17,9 +18,7 @@ function App() {
     setHabits(updatedHabits);
   };
 
-  const total = habits.length;
-  const completed = habits.filter(habit => habit.completed).length;
-  const percentage = total === 0 ? 0 : Math.round((completed/total)*100);
+
 
   const toggleHabit = (id) => {
     const updatedHabits = habits.map(habit => habit.id === id ? {...habit, completed: !habit.completed} : habit);
@@ -34,27 +33,9 @@ function App() {
     <div>
       <h1>Habits Tracker</h1>
       <HabitForm onAddHabit={addHabit}/>
-      <h2>Progreso</h2>
-      <p>
-        {completed} de {total} completados ({percentage}%)
-      </p>
-      <div style={{
-        width: "100%",
-        backgroundColor: "#eee",
-        borderRadius: "10px",
-        overflow: "hidden"
-      }}>
-      <div style={{
-        width: `${percentage}%`,
-        backgroundColor: percentage === 100 ? "limegreen" : "orange",
-        height: "20px",
-        transition: "0.3s"
-      }}>
-        
-      </div>
-      
 
-      </div>
+      <ProgressSummary habits={habits}/>
+
       <HabitsList habits={habits} deleteHabit={deleteHabit} toggleHabit={toggleHabit} />
     </div>
   );
