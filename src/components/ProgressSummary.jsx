@@ -1,3 +1,5 @@
+import "./ProgressSummary.css"
+
 const ProgressSummary = ({habits}) => {
 
     const total = habits.length;
@@ -5,24 +7,16 @@ const ProgressSummary = ({habits}) => {
     const percentage = total === 0 ? 0 : Math.round((completed/total)*100);
 
     return (
-        <div>
+        <div className="progress-summary">
             <h2>Progreso</h2>
 
             <p>
                 {completed} de {total} completados ({percentage}%)
             </p>
-            <div style={{
-                width: "100%",
-                backgroundColor: "#eee",
-                borderRadius: "10px",
-                overflow: "hidden"
-            }}>
-                <div style={{
-                    width: `${percentage}%`,
-                    backgroundColor: percentage === 100 ? "limegreen" : "orange",
-                    height: "20px",
-                    transition: "0.3s"
-                }}
+            <div className="progress-bar">
+                <div className="progress-fill"
+                style={{width: `${percentage}%`,
+                backgroundColor: percentage === 100 ? "limegreen" : "orange" }}
                 ></div>
             </div>
         </div>

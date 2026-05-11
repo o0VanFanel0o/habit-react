@@ -1,0 +1,14 @@
+.progress-summary {
+    margin: 2rem;
+}
+.progress-bar {
+    width: 100%;
+    background-color: grey;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 20px;
+}
+.progress-fill {
+    height: 20px;
+    transition: 0.5s;
+}
