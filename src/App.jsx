@@ -30,7 +30,7 @@ function App() {
   }, [habits])
 
   return (
-    <div>
+    <div className="app">
       <h1>Habits Tracker</h1>
       <HabitForm onAddHabit={addHabit}/>
 
