@@ -1,0 +1,29 @@
+.habit-card {
+    background-color: #1e1e1e;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.habit-card:hover {
+    transform: translateY(-2px);
+}
+
+.habit-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.habit-left h3 {
+    margin: 0;
+}
+
+.habit-left p {
+    margin: 0;
+    opacity: 0.5;
+}

@@ -1,17 +1,29 @@
+import "./HabitsList.css"
 
 const HabitsList = ({habits, deleteHabit, toggleHabit}) => {
     return (
         <div>
             <h2>Habits List</h2>
+
             {habits.map((habit) => (
-                <div key={habit.id}>
-                    <input type="checkbox" 
-                    checked={habit.completed} 
-                    onChange={() => toggleHabit(habit.id)} />
-                    <p>{habit.name} - {habit.time} minutos</p>
-                    <button onClick={() => deleteHabit(habit.id)}>❌</button>
+                <div className="habit-card" key={habit.id}>
+
+                    <div className="habit-left">
+            
+
+                        <input type="checkbox" 
+                            checked={habit.completed} 
+                            onChange={() => toggleHabit(habit.id)} 
+                        />
+
+                        <div>
+                            <h3>{habit.name}</h3>
+                            <p>{habit.time} minutos</p>
+                        </div>
+                    </div>
+                    <button className="delete-btn" onClick={() => deleteHabit(habit.id)}>❌</button>
                 </div>
-            ))}
+            ))};
         </div>
     );
 };
