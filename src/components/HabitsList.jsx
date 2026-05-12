@@ -23,7 +23,7 @@ const HabitsList = ({habits, deleteHabit, toggleHabit}) => {
                     </div>
                     <button className="delete-btn" onClick={() => deleteHabit(habit.id)}>❌</button>
                 </div>
-            ))};
+            ))}
         </div>
     );
 };

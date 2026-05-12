@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./HabitForm.css"
 
 const HabitForm = ({onAddHabit}) => {
     const [name, setName] = useState("");
@@ -25,7 +26,7 @@ const HabitForm = ({onAddHabit}) => {
         setTime("");
     };
     return (
-        <form onSubmit = {handleSubmit}>
+        <form className="habit-form" onSubmit = {handleSubmit}>
             <input type="text" placeholder="Habit Name" value={name} onChange={(e) => setName(e.target.value)} />
             <input type="number" placeholder="Habit Time" value={time} onChange={(e) => setTime(e.target.value)} />
             <button type="submit">Agregar Hábito</button>

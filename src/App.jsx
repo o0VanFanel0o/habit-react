@@ -36,7 +36,7 @@ function App() {
 
       <ProgressSummary habits={habits}/>
 
-      <HabitsList habits={habits} deleteHabit={deleteHabit} toggleHabit={toggleHabit} />
+      <HabitsList habits={habits} deleteHabit={deleteHabit} toggleHabit={toggleHabit}/>
     </div>
   );
 }
