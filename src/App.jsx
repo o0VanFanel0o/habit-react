@@ -10,6 +10,9 @@ function App() {
     return saveHabits ? JSON.parse(saveHabits) : [];
   })
 
+  const [filter, setFilter] = useState("all")
+
+
   const addHabit = (newHabit) => {
     setHabits([...habits, { ...newHabit, completed: false }]);
   };
@@ -29,6 +32,16 @@ function App() {
     localStorage.setItem("habits", JSON.stringify(habits))
   }, [habits])
 
+  const filteredHabits = habits.filter((habit) => {
+    if (filter === "completed"){
+      return habit.completed
+    }
+    if (filter === "pending"){
+      return !habit.completed
+    }
+    return true
+  })
+
   return (
     <div className="app">
       <h1>Habits Tracker</h1>
@@ -36,7 +49,7 @@ function App() {
 
       <ProgressSummary habits={habits}/>
 
-      <HabitsList habits={habits} deleteHabit={deleteHabit} toggleHabit={toggleHabit}/>
+      <HabitsList habits={filteredHabits} deleteHabit={deleteHabit} toggleHabit={toggleHabit}/>
     </div>
   );
 }
