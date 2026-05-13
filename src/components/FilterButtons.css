@@ -1,0 +1,5 @@
+.filters .active {
+    background-color: orange;
+    color: black;
+    font-weight: bold;
+}

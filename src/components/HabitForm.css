@@ -14,7 +14,7 @@
 }
 
 .habit-form input:focus {
-    outline: 2px solid orange;
+    outline: 2px solid #009087;
 }
 .button2 {
     display: inline-block;
