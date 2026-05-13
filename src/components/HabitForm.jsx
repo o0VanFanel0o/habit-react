@@ -29,7 +29,7 @@ const HabitForm = ({onAddHabit}) => {
         <form className="habit-form" onSubmit = {handleSubmit}>
             <input type="text" placeholder="Habit Name" value={name} onChange={(e) => setName(e.target.value)} />
             <input type="number" placeholder="Habit Time" value={time} onChange={(e) => setTime(e.target.value)} />
-            <button type="submit">Agregar Hábito</button>
+            <button className="button2" type="submit">Agregar Hábito</button>
         </form>
     );
 };
