@@ -3,6 +3,7 @@ import HabitsList from "./components/HabitsList";
 import HabitForm from "./components/HabitForm";
 import ProgressSummary from "./components/ProgressSummary";
 import FilterButtons from "./components/FilterButtons";
+import HabitCheck from "./components/HabitCheck";
 
 function App() {
   const [habits, setHabits] = useState(() => {
@@ -47,6 +48,8 @@ function App() {
     <div className="app">
       <h1>Habits Tracker</h1>
       <HabitForm onAddHabit={addHabit}/>
+
+      <HabitCheck onAddHabit={addHabit}/>
 
       <ProgressSummary habits={habits}/>
 
