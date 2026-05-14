@@ -40,9 +40,21 @@ function App() {
     setHabits(updatedHabits);
   };
 
+  const toggleCheck = (id) => {
+    setChecks((prev) =>
+      prev.map((check) =>
+        check.id === id ? { ...check, completed: !check.completed } : check
+      )
+    );
+  };
+
   useEffect(() => {
     localStorage.setItem("habits", JSON.stringify(habits))
   }, [habits])
+
+  useEffect(() => {
+    localStorage.setItem("checks", JSON.stringify(checks))
+  }, [checks])
 
   const filteredHabits = habits.filter((habit) => {
     if (filter === "completed"){
@@ -67,7 +79,7 @@ function App() {
 
       <HabitsList habits={filteredHabits} deleteHabit={deleteHabit} toggleHabit={toggleHabit}/>
 
-      <HabitCheckList checks={checks}/>
+      <HabitCheckList checks={checks} toggleCheck={toggleCheck}/>
     </div>
   );
 }
