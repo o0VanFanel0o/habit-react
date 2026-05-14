@@ -8,8 +8,12 @@ import HabitCheck from "./components/HabitCheck";
 function App() {
   const [habits, setHabits] = useState(() => {
     const saveHabits = localStorage.getItem("habits");
-
     return saveHabits ? JSON.parse(saveHabits) : [];
+  })
+
+  const [checks, setChecks] = useState(() => {
+    const saveChecks = localStorage.getItem("checks");
+    return saveChecks ? JSON.parse(saveChecks) : [];
   })
 
   const [filter, setFilter] = useState("all")
@@ -18,6 +22,11 @@ function App() {
   const addHabit = (newHabit) => {
     setHabits([...habits, { ...newHabit, completed: false }]);
   };
+
+  const addCheck = (newCheck) => {
+    setChecks([...checks, {...newCheck, completed: false}])
+  }
+
   const deleteHabit = (id) => {
     const updatedHabits = habits.filter((habit) => habit.id !== id);
     setHabits(updatedHabits);
@@ -49,7 +58,7 @@ function App() {
       <h1>Habits Tracker</h1>
       <HabitForm onAddHabit={addHabit}/>
 
-      <HabitCheck onAddHabit={addHabit}/>
+      <HabitCheck onAddHabit={addCheck}/>
 
       <ProgressSummary habits={habits}/>
 

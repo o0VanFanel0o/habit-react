@@ -1,6 +1,6 @@
 import {useState} from "react"
 
-const HabitCheck = ({onAddHabit}) => {
+const HabitCheck = ({onAddCheck}) => {
     const [nameCheck, setName] = useState("");
 
     const handleSubmit = (e) => {
