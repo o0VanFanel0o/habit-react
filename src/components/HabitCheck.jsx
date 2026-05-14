@@ -9,11 +9,11 @@ const HabitCheck = ({onAddCheck}) => {
             alert("Por favor, ingresa nombre")
             return;
         }
-        const newHabit = {
+        const newCheck = {
             id: Date.now(),
             nameCheck
             }
-        onAddHabit(newHabit)
+        onAddCheck(newCheck)
         setName("")
     };
     return(
