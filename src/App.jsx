@@ -67,19 +67,28 @@ function App() {
   })
 
   return (
-    <div className="app">
-      <h1>Habits Tracker</h1>
-      <HabitForm onAddHabit={addHabit}/>
+    <div className="layout">
+      <aside className="left-sidebar">
 
-      <HabitCheck onAddCheck={addCheck}/>
+        <HabitForm onAddHabit={addHabit}/>
 
-      <ProgressSummary habits={habits}/>
+        <HabitCheck onAddCheck={addCheck}/>
 
-      <FilterButtons filter={filter} setFilter={setFilter}/>
+      </aside>
+      <main className="main-content">
+        <h1>Habits Tracker</h1>
+        <ProgressSummary habits={habits}/>
 
-      <HabitsList habits={filteredHabits} deleteHabit={deleteHabit} toggleHabit={toggleHabit}/>
+        <FilterButtons filter={filter} setFilter={setFilter}/>
 
-      <HabitCheckList checks={checks} toggleCheck={toggleCheck}/>
+        <HabitsList habits={filteredHabits} deleteHabit={deleteHabit} toggleHabit={toggleHabit}/>
+
+      </main>
+      <aside className="right-sidebar">
+        <h2>Dalily Checklist</h2>
+        <HabitCheckList checks={checks} toggleCheck={toggleCheck}/>
+
+      </aside>
     </div>
   );
 }
