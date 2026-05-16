@@ -85,7 +85,6 @@ function App() {
 
       </main>
       <aside className="right-sidebar">
-        <h2>Dalily Checklist</h2>
         <HabitCheckList checks={checks} toggleCheck={toggleCheck}/>
 
       </aside>

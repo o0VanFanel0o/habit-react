@@ -1,4 +1,5 @@
 import {useState} from "react"
+import "./HabitCheck.css"
 
 const HabitCheck = ({onAddCheck}) => {
     const [nameCheck, setName] = useState("");

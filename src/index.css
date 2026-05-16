@@ -10,18 +10,21 @@ body {
 .layout {
   display: grid;
   grid-template-columns: 250px 1fr 250px;
-  height: 100vh;
+  gap: 2rem;
+  padding: 2rem;
 }
 .main-content {
   background-color:#F4F0EA;
-  border-radius: 12px;
   margin-top: 24px;
   padding: 2rem;
-  overflow-y: auto;
-  
 }
 .left-sidebar, .right-sidebar {
   padding: 1.5rem;
+  position: sticky;
+  top: 2rem;
+  height: fit-content;
+  align-self: start;
+
 }
 
 #root {
