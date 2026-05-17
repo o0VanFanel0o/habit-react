@@ -19,7 +19,6 @@ body {
   padding: 2rem;
 }
 .left-sidebar, .right-sidebar {
-  padding: 1.5rem;
   position: sticky;
   top: 2rem;
   height: fit-content;

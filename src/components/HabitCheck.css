@@ -1,7 +1,14 @@
+.habit-check {
+    background-color: #FF8126;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
 .habit-check input {
+    margin: 12px;
     padding: 0.8rem 0.7rem;
     border: none;
     border-radius: 12px;
-    background-color: grey;
+    background-color: #F4F0EA;
     font-size: 1rem;
 }
