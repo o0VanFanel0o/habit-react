@@ -13,17 +13,30 @@ body {
   gap: 2rem;
   padding: 2rem;
 }
-.main-content {
-  background-color:#F4F0EA;
-  margin-top: 24px;
-  padding: 2rem;
-}
-.left-sidebar, .right-sidebar {
+
+.left-sidebar,
+.right-sidebar {
   position: sticky;
   top: 2rem;
   height: fit-content;
   align-self: start;
+}
 
+.main-content {
+  background-color: #F4F0EA;
+  margin-top: 24px;
+  padding: 2rem;
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .left-sidebar,
+  .right-sidebar {
+    position: static;
+  }
 }
 
 #root {
