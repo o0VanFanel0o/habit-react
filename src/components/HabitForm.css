@@ -15,7 +15,7 @@
 }
 
 .habit-form input:focus {
-    outline: 2px solid #009087;
+    outline: 2px solid naranja;
 }
 .button2 {
     margin: 12px;
@@ -31,12 +31,10 @@
     border-radius: 0.5em;
     background: #e8e8e8;
     border: 1px solid #e8e8e8;
-    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ECE4D9;
     }
     
     .button2:active {
     color: #666;
-    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
     }
     
     .button2:before {

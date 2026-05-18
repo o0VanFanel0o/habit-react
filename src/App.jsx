@@ -5,6 +5,7 @@ import ProgressSummary from "./components/ProgressSummary";
 import FilterButtons from "./components/FilterButtons";
 import HabitCheck from "./components/HabitCheck";
 import HabitCheckList from "./components/HabitCheckList";
+import StatsCards from "./components/StatsCards";
 
 function App() {
   const [habits, setHabits] = useState(() => {
@@ -77,6 +78,9 @@ function App() {
       </aside>
       <main className="main-content">
         <h1>Habits Tracker</h1>
+
+        <StatsCards habits={habits} check={checks}/>
+
         <ProgressSummary habits={habits}/>
 
         <FilterButtons filter={filter} setFilter={setFilter}/>
