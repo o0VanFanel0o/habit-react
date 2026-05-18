@@ -1,3 +1,5 @@
+import "./StatsCards.css";
+
 const StatsCards = ({habits, check}) => {
     const totalHabits = habits.length;
 
