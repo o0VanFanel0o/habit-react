@@ -39,9 +39,9 @@ https://habit-react.vercel.app/
 
 ---
 
-## 📸 Captura de Pantalla
+## 📸 Demo
 
-![Habit Tracker Screenshot](./main/habit-react/src/assets/Demo.gif)
+![Habit Tracker Screenshot](./habit-react/src/assets/Demo.gif)
 
 ---
 
