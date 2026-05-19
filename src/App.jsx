@@ -48,7 +48,16 @@ function App() {
       )
     );
   };
+  
+  const editHabit = (id) => {
+    const newName = prompt("Nuevo nombre:");
 
+    if(!newName) return;
+
+    const uptadeHabits = habits.map((habit) =>
+      habit.id === id ? {...habit, name:newName} : habit);
+    setHabits(uptadeHabits)
+  }
   useEffect(() => {
     localStorage.setItem("habits", JSON.stringify(habits))
   }, [habits])
@@ -66,7 +75,6 @@ function App() {
     }
     return true
   })
-
   return (
     <div className="layout">
       <aside className="left-sidebar">
@@ -85,7 +93,7 @@ function App() {
 
         <FilterButtons filter={filter} setFilter={setFilter}/>
 
-        <HabitsList habits={filteredHabits} deleteHabit={deleteHabit} toggleHabit={toggleHabit}/>
+        <HabitsList habits={filteredHabits} deleteHabit={deleteHabit} toggleHabit={toggleHabit} editHabit={editHabit}/>
 
       </main>
       <aside className="right-sidebar">
