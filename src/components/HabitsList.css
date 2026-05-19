@@ -25,6 +25,7 @@
 }
 
 .habit-left p {
+    font-weight: bold;
     margin: 0;
     opacity: 0.5;
 }

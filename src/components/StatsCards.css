@@ -20,6 +20,7 @@
     margin-bottom: 10px;
 }
 .stat-card p {
+    font-weight: bold;
     color: #b0b0b0
 }
 @media (max-width: 900px) {
