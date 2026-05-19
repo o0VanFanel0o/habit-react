@@ -1,16 +1,105 @@
-# React + Vite
+# Habit Tracker Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un dashboard moderno de productividad desarrollado con React y Vite.
 
-Currently, two official plugins are available:
+Esta aplicación permite administrar hábitos, llevar seguimiento del progreso y organizar tareas diarias mediante una interfaz responsive tipo dashboard.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Demo en Vivo
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://habit-react.vercel.app/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Funcionalidades
+
+- Crear hábitos
+- Editar hábitos
+- Eliminar hábitos
+- Marcar hábitos como completados
+- Sistema de checklist diario
+- Seguimiento de progreso
+- Tarjetas de estadísticas
+- Layout responsive tipo dashboard
+- Persistencia de datos con LocalStorage
+- Sidebars sticky
+- Arquitectura basada en componentes
+
+---
+
+## 🛠 Tecnologías Utilizadas
+
+- React
+- Vite
+- JavaScript
+- CSS Grid
+- Responsive Design
+- LocalStorage API
+
+---
+
+## 📸 Captura de Pantalla
+
+![Habit Tracker Screenshot](./main/habit-react/src/assets/Demo.gif)
+
+---
+
+## 📂 Estructura del Proyecto
+
+```bash
+src/
+│
+├── components/
+│   ├── HabitForm.jsx
+│   ├── HabitsList.jsx
+│   ├── HabitCheck.jsx
+│   ├── HabitCheckList.jsx
+│   ├── ProgressSummary.jsx
+│   └── StatsCards.jsx
+│
+├── assets/
+│   └── fonts/
+│
+├── App.jsx
+└── main.jsx
+```
+
+---
+
+## ⚡ Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone https://github.com/o0VanFanel0o/habit-react.git
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+Ejecutar el servidor de desarrollo:
+
+```bash
+npm run dev
+```
+
+---
+
+## 📈 Mejoras Futuras
+
+- Dark Mode
+- Sistema de categorías
+- Gráficas y analíticas
+- Drag and Drop para hábitos
+- Autenticación de usuarios
+- Integración con backend
+
+---
+
+## 👨‍💻 Autor
+
+Desarrollado por Abraham Guevara
