@@ -41,7 +41,7 @@ https://habit-react.vercel.app/
 
 ## 📸 Demo
 
-![Habit Tracker Screenshot](./habit-react/src/assets/Demo.gif)
+![Habit Tracker Demo](./src/assets/Demo.gif)
 
 ---
 
