@@ -1,13 +1,14 @@
 import {
-    Chart as ChartJS,
-    ArcElement,
-    Tooltip,
-    Legend,
+  Chart as ChartJS,
+  RadialLinearScale,
+  ArcElement,
+  Tooltip,
+  Legend,
 } from "chart.js";
-import { Doughnut } from "react-chartjs-2";
+import { PolarArea } from "react-chartjs-2";
 import "./HabitsChart.css";
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
 const HabitsChart = ({ habits = [] }) => {
     const completed = habits.filter((habit) => habit.completed).length;
@@ -46,7 +47,7 @@ const HabitsChart = ({ habits = [] }) => {
         <div className="chart-container">
         <h2>Habits Progress</h2>
         <div className="chart-wrapper">
-            <Doughnut data={data} options={options} />
+            <PolarArea data={data} options={options} />
         </div>
         </div>
     );
