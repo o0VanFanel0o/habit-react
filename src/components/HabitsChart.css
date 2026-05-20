@@ -1,0 +1,20 @@
+.chart-container {
+  max-width: 320px;
+  margin: 24px auto;
+  padding: 1rem;
+}
+
+.chart-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.chart-wrapper {
+  position: relative;
+  height: 280px;
+}
+
+.chart-container p {
+  text-align: center;
+  color: #666;
+}

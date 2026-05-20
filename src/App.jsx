@@ -6,17 +6,26 @@ import FilterButtons from "./components/FilterButtons";
 import HabitCheck from "./components/HabitCheck";
 import HabitCheckList from "./components/HabitCheckList";
 import StatsCards from "./components/StatsCards";
+import HabitsChart from "./components/HabitsChart";
 
 function App() {
   const [habits, setHabits] = useState(() => {
-    const saveHabits = localStorage.getItem("habits");
-    return saveHabits ? JSON.parse(saveHabits) : [];
-  })
+    try {
+      const saveHabits = localStorage.getItem("habits");
+      return saveHabits ? JSON.parse(saveHabits) : [];
+    } catch {
+      return [];
+    }
+  });
 
   const [checks, setChecks] = useState(() => {
-    const saveChecks = localStorage.getItem("checks");
-    return saveChecks ? JSON.parse(saveChecks) : [];
-  })
+    try {
+      const saveChecks = localStorage.getItem("checks");
+      return saveChecks ? JSON.parse(saveChecks) : [];
+    } catch {
+      return [];
+    }
+  });
 
   const [filter, setFilter] = useState("all")
 
@@ -88,6 +97,8 @@ function App() {
         <h1>Habits Tracker</h1>
 
         <StatsCards habits={habits} check={checks}/>
+
+        <HabitsChart habits={habits} />
 
         <ProgressSummary habits={habits}/>
 
