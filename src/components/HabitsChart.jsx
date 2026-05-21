@@ -20,7 +20,7 @@ const HabitsChart = ({ habits = [] }) => {
         datasets: [
         {
             data: [completed, pending],
-            backgroundColor: ["#4ade80", "#f87171"],
+            backgroundColor: ["#ffb162", "#a35139"],
             borderRadius: 8,
             borderSkipped: false,
         },
