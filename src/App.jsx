@@ -92,13 +92,15 @@ function App() {
 
         <HabitCheck onAddCheck={addCheck}/>
 
+        <HabitsChart habits={habits} />
+
       </aside>
       <main className="main-content">
         <h1>Habits Tracker</h1>
 
         <StatsCards habits={habits} check={checks}/>
 
-        <HabitsChart habits={habits} />
+
 
         <ProgressSummary habits={habits}/>
 
